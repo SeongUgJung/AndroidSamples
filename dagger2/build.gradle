@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath kotlin_classpath
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.nobrain.androidsamples"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "DAUM_API_KEY", "\"${rootProject.getProperties().get("daum.apikey")}\""
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    compile support_appcompat
+    compile support_recyclerview
+    compile support_constrainlayout
+
+    compile retrofit
+    compile retrofit_convert_gson
+    compile retrofit_adapter_rxjava2
+
+    compile dagger
+    kapt dagger_compiler
+
+    compile rxjava2
+    compile rxjava2_android
+
+    compile glide
+
+    compile stetho
+    compile stetho_okhttp
+
+    compile kotlin_stdlib
+
+}

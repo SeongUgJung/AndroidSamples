@@ -1,0 +1,40 @@
+ext {
+    ver_android_support = "25.2.0"
+    ver_retrofit = "2.2.0"
+    ver_dagger2 = "2.10-rc2"
+    ver_butterknife = "8.5.1"
+    ver_stetho = "1.4.2"
+    ver_kotlin = '1.1.0'
+
+    kotlin_classpath = "org.jetbrains.kotlin:kotlin-gradle-plugin:$ver_kotlin"
+    kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:$ver_kotlin"
+
+    support_appcompat = "com.android.support:appcompat-v7:$ver_android_support"
+    support_recyclerview = "com.android.support:recyclerview-v7:$ver_android_support"
+    support_constrainlayout = 'com.android.support.constraint:constraint-layout:1.0.1'
+
+    retrofit = "com.squareup.retrofit2:retrofit:$ver_retrofit"
+    retrofit_convert_gson = "com.squareup.retrofit2:converter-gson:$ver_retrofit"
+    retrofit_adapter_rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$ver_retrofit"
+
+    dagger = "com.google.dagger:dagger:$ver_dagger2"
+    dagger_android = "com.google.dagger:dagger-android:$ver_dagger2@aar"
+    dagger_android_support = "com.google.dagger:dagger-android-support:$ver_dagger2@aar"
+    dagger_compiler = "com.google.dagger:dagger-compiler:$ver_dagger2"
+    dagger_android_compiler = "com.google.dagger:dagger-android-processor:$ver_dagger2"
+
+    butterknife = "com.jakewharton:butterknife:$ver_butterknife"
+    butterknife_compiler = "com.jakewharton:butterknife-compiler:$ver_butterknife"
+
+    rxjava2 = 'io.reactivex.rxjava2:rxjava:2.0.6'
+    rxjava2_android = 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    glide = 'com.github.bumptech.glide:glide:3.7.0'
+
+    junit = 'junit:junit:4.12'
+    assertj = 'org.assertj:assertj-core:1.7.+'
+
+    stetho = "com.facebook.stetho:stetho:$ver_stetho"
+    stetho_okhttp = "com.facebook.stetho:stetho-okhttp3:$ver_stetho"
+
+}
