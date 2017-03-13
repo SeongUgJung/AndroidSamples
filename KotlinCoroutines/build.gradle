@@ -38,8 +38,6 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    testCompile 'junit:junit:4.12'
 
     compile support_appcompat
     compile support_recyclerview
@@ -61,4 +59,12 @@ dependencies {
     compile stetho_okhttp
 
     compile kotlin_stdlib
+    compile kotlin_coroutines_core
+}
+
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
 }

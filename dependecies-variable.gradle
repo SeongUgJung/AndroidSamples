@@ -8,6 +8,7 @@ ext {
 
     kotlin_classpath = "org.jetbrains.kotlin:kotlin-gradle-plugin:$ver_kotlin"
     kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:$ver_kotlin"
+    kotlin_coroutines_core = 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.12'
 
     support_appcompat = "com.android.support:appcompat-v7:$ver_android_support"
     support_recyclerview = "com.android.support:recyclerview-v7:$ver_android_support"
