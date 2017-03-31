@@ -1,4 +1,4 @@
-package com.nobrain.androidsamples.presenter.search
+package com.nobrain.dagger2.presenter.search
 
 
 interface SearchPresenter {

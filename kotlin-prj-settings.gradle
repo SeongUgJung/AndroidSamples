@@ -1,0 +1,14 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+kapt {
+    generateStubs = true
+}
+
+android.sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+}
+
+dependencies {
+    compile rootProject.ext.kotlin_stdlib
+}

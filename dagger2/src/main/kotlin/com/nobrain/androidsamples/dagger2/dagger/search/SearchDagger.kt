@@ -1,11 +1,11 @@
-package com.nobrain.androidsamples.dagger.search
+package com.nobrain.dagger2.dagger.search
 
-import com.nobrain.androidsamples.presenter.search.SearchPresenter
-import com.nobrain.androidsamples.presenter.search.SearchPresenterImpl
-import com.nobrain.androidsamples.ui.search.SearchActivity
-import com.nobrain.androidsamples.ui.search.adapter.SearchResultAdapter
-import com.nobrain.androidsamples.ui.search.adapter.SearchResultAdapterModel
-import com.nobrain.androidsamples.ui.search.adapter.SearchResultAdapterView
+import com.nobrain.dagger2.presenter.search.SearchPresenter
+import com.nobrain.dagger2.presenter.search.SearchPresenterImpl
+import com.nobrain.dagger2.ui.search.SearchActivity
+import com.nobrain.dagger2.ui.search.adapter.SearchResultAdapter
+import com.nobrain.dagger2.ui.search.adapter.SearchResultAdapterModel
+import com.nobrain.dagger2.ui.search.adapter.SearchResultAdapterView
 import dagger.Module
 import dagger.Provides
 import dagger.Subcomponent

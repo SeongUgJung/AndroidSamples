@@ -1,10 +1,10 @@
-package com.nobrain.androidsamples
+package com.nobrain.dagger2
 
 import android.app.Application
 import com.facebook.stetho.Stetho
-import com.nobrain.androidsamples.api.ApiModule
-import com.nobrain.androidsamples.dagger.search.SearchComponent
-import com.nobrain.androidsamples.dagger.search.SearchModule
+import com.nobrain.dagger2.api.ApiModule
+import com.nobrain.dagger2.dagger.search.SearchComponent
+import com.nobrain.dagger2.dagger.search.SearchModule
 import dagger.Component
 
 

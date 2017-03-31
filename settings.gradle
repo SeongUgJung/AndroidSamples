@@ -1,1 +1,1 @@
-include ':dagger2', ':KotlinCoroutines'
+include ':dagger2', ':KotlinCoroutines', ':jsonparser'

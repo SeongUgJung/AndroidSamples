@@ -1,9 +1,9 @@
-package com.nobrain.androidsamples.ui.search.adapter
+package com.nobrain.dagger2.ui.search.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.bumptech.glide.Glide
-import com.nobrain.androidsamples.api.model.Image
+import com.nobrain.dagger2.api.model.Image
 import kotlinx.android.synthetic.main.item_search.view.*
 
 

@@ -1,4 +1,4 @@
-package com.nobrain.androidsamples.base.view;
+package com.nobrain.dagger2.base.view;
 
 
 import android.text.Editable;

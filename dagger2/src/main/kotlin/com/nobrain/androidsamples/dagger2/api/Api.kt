@@ -1,9 +1,9 @@
-package com.nobrain.androidsamples.api
+package com.nobrain.dagger2.api
 
 
 import com.google.gson.annotations.SerializedName
-import com.nobrain.androidsamples.BuildConfig
-import com.nobrain.androidsamples.api.model.Images
+import com.nobrain.dagger2.BuildConfig
+import com.nobrain.dagger2.api.model.Images
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.http.GET

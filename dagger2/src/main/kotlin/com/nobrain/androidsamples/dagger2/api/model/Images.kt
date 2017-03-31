@@ -1,4 +1,4 @@
-package com.nobrain.androidsamples.api.model
+package com.nobrain.dagger2.api.model
 
 import java.util.*
 

@@ -1,9 +1,9 @@
-package com.nobrain.androidsamples.presenter.search
+package com.nobrain.dagger2.presenter.search
 
 
 import android.text.TextUtils
-import com.nobrain.androidsamples.api.Api
-import com.nobrain.androidsamples.ui.search.adapter.SearchResultAdapterModel
+import com.nobrain.dagger2.api.Api
+import com.nobrain.dagger2.ui.search.adapter.SearchResultAdapterModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.processors.PublishProcessor
 import io.reactivex.schedulers.Schedulers

@@ -1,12 +1,12 @@
-package com.nobrain.androidsamples.ui.search.adapter
+package com.nobrain.dagger2.ui.search.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.nobrain.androidsamples.R
-import com.nobrain.androidsamples.api.model.Image
-import com.nobrain.androidsamples.base.adapter.AdapterModel
-import com.nobrain.androidsamples.base.adapter.AdapterView
+import com.nobrain.dagger2.R
+import com.nobrain.dagger2.api.model.Image
+import com.nobrain.dagger2.base.adapter.AdapterModel
+import com.nobrain.dagger2.base.adapter.AdapterView
 import java.util.*
 
 interface SearchResultAdapterModel : AdapterModel<Image>

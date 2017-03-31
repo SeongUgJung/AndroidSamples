@@ -1,10 +1,13 @@
 ext {
+
+    base_application_name = "com.nobrain.androidsamples"
+
     ver_android_support = "25.2.0"
     ver_retrofit = "2.2.0"
     ver_dagger2 = "2.10-rc2"
     ver_butterknife = "8.5.1"
     ver_stetho = "1.4.2"
-    ver_kotlin = '1.1.0'
+    ver_kotlin = '1.1.1'
 
     kotlin_classpath = "org.jetbrains.kotlin:kotlin-gradle-plugin:$ver_kotlin"
     kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:$ver_kotlin"
