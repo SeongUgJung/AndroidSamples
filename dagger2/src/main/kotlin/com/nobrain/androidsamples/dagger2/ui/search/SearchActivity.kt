@@ -1,16 +1,16 @@
-package com.nobrain.dagger2.ui.search
+package com.nobrain.androidsamples.dagger2.ui.search
 
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
-import com.nobrain.dagger2.R
-import com.nobrain.dagger2.SampleApplication
-import com.nobrain.dagger2.dagger.search.SearchModule
-import com.nobrain.dagger2.presenter.search.SearchPresenter
-import com.nobrain.dagger2.ui.search.adapter.SearchResultAdapter
-import com.nobrain.dagger2.ui.search.adapter.SearchResultAdapterView
-import kotlinx.android.synthetic.main.act_main.*
+import com.nobrain.androidsamples.dagger2.R
+import com.nobrain.androidsamples.dagger2.SampleApplication
+import com.nobrain.androidsamples.dagger2.base.view.SimpleTextWatcher
+import com.nobrain.androidsamples.dagger2.dagger.search.SearchModule
+import com.nobrain.androidsamples.dagger2.presenter.search.SearchPresenter
+import com.nobrain.androidsamples.dagger2.ui.search.adapter.SearchResultAdapter
+import com.nobrain.androidsamples.dagger2.ui.search.adapter.SearchResultAdapterView
 import javax.inject.Inject
 
 

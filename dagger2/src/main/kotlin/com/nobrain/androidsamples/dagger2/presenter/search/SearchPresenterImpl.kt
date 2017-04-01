@@ -1,9 +1,9 @@
-package com.nobrain.dagger2.presenter.search
+package com.nobrain.androidsamples.dagger2.presenter.search
 
 
 import android.text.TextUtils
-import com.nobrain.dagger2.api.Api
-import com.nobrain.dagger2.ui.search.adapter.SearchResultAdapterModel
+import com.nobrain.androidsamples.dagger2.api.Api
+import com.nobrain.androidsamples.dagger2.ui.search.adapter.SearchResultAdapterModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.processors.PublishProcessor
 import io.reactivex.schedulers.Schedulers
@@ -19,21 +19,21 @@ class SearchPresenterImpl @Inject internal constructor(private val view: SearchP
 
     private fun initsearch() {
         searchSubject
-                .throttleLast(200, TimeUnit.MILLISECONDS)
-                .observeOn(AndroidSchedulers.mainThread())
-                .doOnNext {
-                    this.adapterModel.clear()
-                    this.view.refreshImages()
-                }
-                .observeOn(Schedulers.io())
-                .filter { !TextUtils.isEmpty(it) }
-                .toObservable()
-                .concatMap { this.api.searchImages(it) }
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({
-                    this.adapterModel.addItems(it.item)
-                    this.view.refreshImages()
-                }, { it.printStackTrace() })
+            .throttleLast(200, TimeUnit.MILLISECONDS)
+            .observeOn(AndroidSchedulers.mainThread())
+            .doOnNext {
+                this.adapterModel.clear()
+                this.view.refreshImages()
+            }
+            .observeOn(Schedulers.io())
+            .filter { !TextUtils.isEmpty(it) }
+            .toObservable()
+            .concatMap { this.api.searchImages(it) }
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                this.adapterModel.addItems(it.item)
+                this.view.refreshImages()
+            }, { it.printStackTrace() })
     }
 
 

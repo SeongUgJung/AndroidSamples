@@ -1,4 +1,4 @@
-package com.nobrain.dagger2.base.adapter
+package com.nobrain.androidsamples.dagger2.base.adapter
 
 
 interface AdapterModel<T> {

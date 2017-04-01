@@ -1,12 +1,10 @@
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
-kapt {
-    generateStubs = true
-}
+apply plugin: 'kotlin-kapt'
 
 android.sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
+    test.java.srcDirs += 'src/test/kotlin'
 }
 
 dependencies {

@@ -1,5 +1,6 @@
-package com.nobrain.dagger2.api.model
+package com.nobrain.androidsamples.dagger2.api.model
 
+import com.nobrain.androidsamples.dagger2.api.model.api.model.Image
 import java.util.*
 
 data class Images(var result: Int = 0,

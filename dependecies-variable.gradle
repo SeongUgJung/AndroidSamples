@@ -8,10 +8,12 @@ ext {
     ver_butterknife = "8.5.1"
     ver_stetho = "1.4.2"
     ver_kotlin = '1.1.1'
+    ver_stag = '2.0.2'
 
     kotlin_classpath = "org.jetbrains.kotlin:kotlin-gradle-plugin:$ver_kotlin"
     kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:$ver_kotlin"
     kotlin_coroutines_core = 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.12'
+    kotlin_junit = "org.jetbrains.kotlin:kotlin-test-junit:$ver_kotlin"
 
     support_appcompat = "com.android.support:appcompat-v7:$ver_android_support"
     support_recyclerview = "com.android.support:recyclerview-v7:$ver_android_support"
@@ -40,5 +42,8 @@ ext {
 
     stetho = "com.facebook.stetho:stetho:$ver_stetho"
     stetho_okhttp = "com.facebook.stetho:stetho-okhttp3:$ver_stetho"
+
+    stag_lib = "com.vimeo.stag:stag-library:$ver_stag"
+    stag_compiler = "com.vimeo.stag:stag-library-compiler:$ver_stag"
 
 }

@@ -1,4 +1,4 @@
-package com.nobrain.dagger2.api.model
+package com.nobrain.androidsamples.dagger2.api.model.api.model
 
 
 data class Image(var pubDate: String? = null,

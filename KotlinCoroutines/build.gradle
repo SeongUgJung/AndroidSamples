@@ -1,15 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath kotlin_classpath
-    }
-}
+apply from: "../kotlin-prj-settings.gradle"
 
 android {
     compileSdkVersion 25
@@ -32,9 +22,6 @@ android {
         }
     }
 
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
 }
 
 dependencies {

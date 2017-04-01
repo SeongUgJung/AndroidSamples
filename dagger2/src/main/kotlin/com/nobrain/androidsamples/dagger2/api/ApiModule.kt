@@ -1,4 +1,4 @@
-package com.nobrain.dagger2.api
+package com.nobrain.androidsamples.dagger2.api
 
 
 import com.facebook.stetho.okhttp3.StethoInterceptor
