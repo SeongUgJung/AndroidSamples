@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.bumptech.glide.Glide
 import com.nobrain.androidsamples.dagger2.api.model.api.model.Image
+import kotlinx.android.synthetic.main.item_search.view.*
 
 
 class SearchResultViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -11,6 +11,7 @@ import com.nobrain.androidsamples.dagger2.dagger.search.SearchModule
 import com.nobrain.androidsamples.dagger2.presenter.search.SearchPresenter
 import com.nobrain.androidsamples.dagger2.ui.search.adapter.SearchResultAdapter
 import com.nobrain.androidsamples.dagger2.ui.search.adapter.SearchResultAdapterView
+import kotlinx.android.synthetic.main.act_main.*
 import javax.inject.Inject
 
 

@@ -35,6 +35,7 @@ dependencies {
 
     compile dagger
     kapt dagger_compiler
+    provided javax_annotation
 
     compile rxjava2
     compile rxjava2_android

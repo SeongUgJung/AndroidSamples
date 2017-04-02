@@ -4,11 +4,14 @@ ext {
 
     ver_android_support = "25.2.0"
     ver_retrofit = "2.2.0"
-    ver_dagger2 = "2.10-rc2"
+    ver_dagger2 = "2.10"
     ver_butterknife = "8.5.1"
     ver_stetho = "1.4.2"
     ver_kotlin = '1.1.1'
     ver_stag = '2.0.2'
+    ver_autovalue = "1.3"
+    ver_autovalue_gson = "0.4.6"
+    ver_jackson = "2.8.7"
 
     kotlin_classpath = "org.jetbrains.kotlin:kotlin-gradle-plugin:$ver_kotlin"
     kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:$ver_kotlin"
@@ -28,6 +31,7 @@ ext {
     dagger_android_support = "com.google.dagger:dagger-android-support:$ver_dagger2@aar"
     dagger_compiler = "com.google.dagger:dagger-compiler:$ver_dagger2"
     dagger_android_compiler = "com.google.dagger:dagger-android-processor:$ver_dagger2"
+    javax_annotation = 'javax.annotation:jsr250-api:1.0'
 
     butterknife = "com.jakewharton:butterknife:$ver_butterknife"
     butterknife_compiler = "com.jakewharton:butterknife-compiler:$ver_butterknife"
@@ -46,4 +50,12 @@ ext {
     stag_lib = "com.vimeo.stag:stag-library:$ver_stag"
     stag_compiler = "com.vimeo.stag:stag-library-compiler:$ver_stag"
 
+    autovalue_lib = "com.google.auto.value:auto-value:$ver_autovalue"
+    autovalue_compiler = "com.google.auto.value:auto-value:$ver_autovalue"
+    autovalue_gson_lib = "com.ryanharter.auto.value:auto-value-gson:$ver_autovalue_gson"
+    autovalue_gson_compiler = "com.ryanharter.auto.value:auto-value-gson:$ver_autovalue_gson"
+
+    jackson_core = "com.fasterxml.jackson.core:jackson-core:$ver_jackson"
+    jackson_annotation = "com.fasterxml.jackson.core:jackson-annotations:$ver_jackson"
+    jackson_databind = "com.fasterxml.jackson.core:jackson-databind:$ver_jackson"
 }
