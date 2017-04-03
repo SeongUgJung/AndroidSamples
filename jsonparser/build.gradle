@@ -55,4 +55,7 @@ dependencies {
     kapt autovalue_compiler
     provided autovalue_gson_lib
     kapt autovalue_gson_compiler
+
+    compile logan_lib
+    kapt logan_compiler
 }

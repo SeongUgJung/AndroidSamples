@@ -1,4 +1,4 @@
-package com.nobrain.androidsamples.jsonparser
+package com.nobrain.androidsamples.jsonparser.gson
 
 import com.vimeo.stag.UseStag
 
