@@ -10,7 +10,7 @@
 
 ## [Json Parser](https://github.com/ZeroBrain/AndroidSamples/tree/master/jsonparser)
 
-> To use [Stag-java](https://github.com/vimeo/stag-java) and [Google Auto Value](https://github.com/rharter/auto-value-gson)
+> use [Stag-java](https://github.com/vimeo/stag-java) and [Google Auto Value](https://github.com/rharter/auto-value-gson)
 
 # What's the Next?
 
