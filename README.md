@@ -1,8 +1,8 @@
 # for Android Samples.
 
-## [Dagger2](https://github.com/ZeroBrain/AndroidSamples/tree/master/dagger2)
+## [Dagger2, RxJava, MVP pattern](https://github.com/ZeroBrain/AndroidSamples/tree/master/dagger2)
 
-> Just simple work. If you wanna read in more detail, I would recommend here [eyeahs/MvpDaggerSample](https://github.com/eyeahs/MvpDaggerSample).
+> It's just simple work. If you wanna read in more detail, I would recommend here [eyeahs/MvpDaggerSample](https://github.com/eyeahs/MvpDaggerSample).
 
 ## [Kotlin Coroutines](https://github.com/ZeroBrain/AndroidSamples/tree/master/KotlinCoroutines)
 
