@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
-apply from: "../kotlin-prj-settings.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 kapt.arguments {
     arg("stagDebug", true)
@@ -18,6 +20,10 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
     }
     buildTypes {
         release {
@@ -58,4 +64,7 @@ dependencies {
 
     compile logan_lib
     kapt logan_compiler
+
+    compile kotlin_stdlib
+
 }

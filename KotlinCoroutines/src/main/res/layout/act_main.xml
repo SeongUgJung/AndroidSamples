@@ -17,4 +17,27 @@
         android:layout_height="wrap_content"
         android:text="text : 2" />
 
+    <Button
+        android:id="@+id/btn_main3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="put for 3" />
+
+    <TextView
+        android:id="@+id/tv_main3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text : 3 - read" />
+
+    <Button
+        android:id="@+id/btn_main4"
+        android:layout_width="wrap_content"
+        android:text="put for 4"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_main4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text : 4 - ready" />
+
 </LinearLayout>

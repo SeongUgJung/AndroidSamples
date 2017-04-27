@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.act_main.*
 import kotlinx.coroutines.experimental.CommonPool
+import kotlinx.coroutines.experimental.android.UI
 import kotlinx.coroutines.experimental.async
 import kotlinx.coroutines.experimental.delay
 import kotlinx.coroutines.experimental.launch
-import kotlin.coroutines.experimental.buildSequence
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,29 +16,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.act_main)
 
-        launch(CommonPool) {
-            delay(1000)
-
+        launch(UI) {
             val data = doSomething().await()
-            runOnUiThread { tv_main.text = data }
+            tv_main.text = data
         }
 
-        launch(CommonPool) {
+        launch(UI) {
             delay(1000)
-            runOnUiThread { tv_main2.text = "${tv_main2.text} launch" }
+            tv_main2.text = "${tv_main2.text} launch"
         }
 
         tv_main.text = "${tv_main.text} ready"
-        tv_main2.text = "${tv_main.text} ready"
+        tv_main2.text = "${tv_main2.text} ready"
 
-        buildSequence {
-            for (i in 1..10) yield(i * i)
-            println("over")
-        }
-
+        YeildExample(tv_main3, btn_main3)
+        ChannelExample(tv_main4, btn_main4)
     }
 
     suspend fun doSomething() = async(CommonPool) {
+        delay(1000)
         "${tv_main.text} - Async Await"
     }
 
