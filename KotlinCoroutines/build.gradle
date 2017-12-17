@@ -4,13 +4,13 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion ver_android_compile
+    buildToolsVersion ver_android_buildTool
 
     defaultConfig {
         applicationId "${base_application_name}.kotlincoroutines"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion ver_android_min_sdk
+        targetSdkVersion ver_android_target_sdk
         versionCode 1
         versionName "1.0"
 
@@ -31,27 +31,27 @@ android {
 
 dependencies {
 
-    compile support_appcompat
-    compile support_recyclerview
-    compile support_constrainlayout
+    api support_appcompat
+    api support_recyclerview
+    api support_constrainlayout
 
-    compile retrofit
-    compile retrofit_convert_gson
-    compile retrofit_adapter_rxjava2
+    api retrofit
+    api retrofit_convert_gson
+    api retrofit_adapter_rxjava2
 
-    compile dagger
+    api dagger
     kapt dagger_compiler
 
-    compile rxjava2
-    compile rxjava2_android
+    api rxjava2
+    api rxjava2_android
 
-    compile glide
+    api glide
 
-    compile stetho
-    compile stetho_okhttp
+    api stetho
+    api stetho_okhttp
 
-    compile kotlin_stdlib
-    compile kotlin_coroutines_android
+    api kotlin_stdlib
+    api kotlin_coroutines_android
 }
 
 
