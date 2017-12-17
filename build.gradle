@@ -4,9 +4,10 @@ buildscript {
     apply from: "dependecies-variable.gradle"
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:3.0.1'
 
         classpath rootProject.ext.kotlin_classpath
     }
@@ -15,6 +16,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
 

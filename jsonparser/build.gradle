@@ -8,13 +8,13 @@ kapt.arguments {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion ver_android_compile
+    buildToolsVersion ver_android_buildTool
 
     defaultConfig {
         applicationId "com.nobrain.androidsamples.jsonparser"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion ver_android_min_sdk
+        targetSdkVersion ver_android_target_sdk
         versionCode 1
         versionName "1.0"
 
@@ -32,39 +32,35 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
-    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestApi('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile support_appcompat
-    compile 'com.google.code.gson:gson:2.7'
+    api support_appcompat
+    api 'com.google.code.gson:gson:2.8.0'
 
-    compile stag_lib
+    api stag_lib
     kapt stag_compiler
 
-    testCompile junit
-    testCompile assertj
+    testApi junit
+    testApi assertj
 
-    compile jackson_core
-    compile jackson_databind
-    compile jackson_annotation
+    api jackson_core
+    api jackson_databind
+    api jackson_annotation
 
-    provided autovalue_lib
+    compileOnly autovalue_lib
     kapt autovalue_compiler
-    provided autovalue_gson_lib
+    compileOnly autovalue_gson_lib
     kapt autovalue_gson_compiler
 
-    compile logan_lib
+    api logan_lib
     kapt logan_compiler
 
-    compile kotlin_stdlib
+    api kotlin_stdlib
 
 }
