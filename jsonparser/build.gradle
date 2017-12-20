@@ -53,9 +53,9 @@ dependencies {
     api jackson_databind
     api jackson_annotation
 
-    compileOnly autovalue_lib
+    api autovalue_lib
     kapt autovalue_compiler
-    compileOnly autovalue_gson_lib
+    api autovalue_gson_lib
     kapt autovalue_gson_compiler
 
     api logan_lib

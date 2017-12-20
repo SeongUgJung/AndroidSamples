@@ -1,3 +1,4 @@
-include ':dagger2'
+include ':dagger2', ':naver-search'
 include ':KotlinCoroutines'
 include ':jsonparser'
+include ':dagger2-module:01_before:main-app', ':dagger2-module:01_before:naver-search'

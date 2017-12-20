@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android androidConfig
+
+android {
+    defaultConfig {
+        applicationId "com.nobrain.dagger_before"
+        versionCode 1
+        versionName "1.0"
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation project(':dagger2-module:01_before:naver-search')
+
+    api kotlin_stdlib
+    api support_appcompat
+    api support_constrainlayout
+
+    api dagger
+    api dagger_android
+    api dagger_android_support
+    kapt dagger_compiler
+    kapt dagger_android_compiler
+    compileOnly javax_annotation
+
+    kapt databinding_compiler
+    testApi junit
+}
