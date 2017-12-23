@@ -30,8 +30,13 @@ android {
 }
 
 dependencies {
+
+    implementation project(':dagger2-module:common-style')
+    implementation project(':dagger2-module:common-repository')
+
     api kotlin_stdlib
 
+    api support_v4
     api support_appcompat
     api support_constrainlayout
     api support_recyclerview
@@ -42,6 +47,8 @@ dependencies {
     kapt dagger_compiler
     kapt dagger_android_compiler
     compileOnly javax_annotation
+
+    kapt databinding_compiler
 
     api retrofit
     api retrofit_convert_gson

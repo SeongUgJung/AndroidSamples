@@ -1,6 +1,7 @@
 package com.nobrain.naver_search.viewmodel
 
 import com.nhaarman.mockito_kotlin.whenever
+import com.nobrain.common_repository.SearchQueryRepository
 import com.nobrain.naver_search.repository.NaverSearchRepositoryImpl
 import com.nobrain.naver_search.repository.okHttpClient
 import com.nobrain.naver_search.repository.retrofit
@@ -15,9 +16,9 @@ import org.junit.Test
 import org.mockito.Mock
 import org.mockito.MockitoAnnotations
 
-class NaverSearchViewModelImplTest {
+class NaverSearchViewModelTest {
 
-    lateinit var viewModel: NaverSearchViewModelImpl
+    lateinit var viewModel: NaverSearchViewModel
 
     @get:Rule
     val rxJavaRule = RxSchedulerRule()
@@ -27,12 +28,12 @@ class NaverSearchViewModelImplTest {
     fun setUp() {
         MockitoAnnotations.initMocks(this)
         whenever(lifecycle.bindToLifecycle<FragmentEvent>()).thenReturn(RxLifecycleAndroid.bindFragment(BehaviorSubject.createDefault(FragmentEvent.CREATE)))
-        viewModel = NaverSearchViewModelImpl(lifecycle, NaverSearchRepositoryImpl(retrofit { okHttpClient() }))
+        viewModel = NaverSearchViewModel(lifecycle, NaverSearchRepositoryImpl(retrofit { okHttpClient() }))
     }
 
     @Test
     fun setQuery() {
-        viewModel.setQuery("Beauty")
+        SearchQueryRepository.setQuery("Beauty")
         assertThat(viewModel.datas.size).isGreaterThan(0)
     }
 

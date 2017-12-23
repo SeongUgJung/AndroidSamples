@@ -9,13 +9,12 @@ import com.nobrain.naver_search.repository.NaverSearchRepositoryImpl
 import com.nobrain.naver_search.repository.okHttpClient
 import com.nobrain.naver_search.repository.retrofit
 import com.nobrain.naver_search.viewmodel.NaverSearchViewModel
-import com.nobrain.naver_search.viewmodel.NaverSearchViewModelImpl
 import com.trello.rxlifecycle2.components.support.RxFragment
 
 
 class NaverSearchFragment : RxFragment() {
     lateinit var binding: FragmentNaverBinding
-    val viewModel: NaverSearchViewModel by lazy { NaverSearchViewModelImpl(this, NaverSearchRepositoryImpl(retrofit { okHttpClient() })) }
+    val viewModel: NaverSearchViewModel by lazy { NaverSearchViewModel(this, NaverSearchRepositoryImpl(retrofit { okHttpClient() })) }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentNaverBinding.inflate(inflater, container, false)
@@ -27,5 +26,8 @@ class NaverSearchFragment : RxFragment() {
         binding.viewModel = viewModel
     }
 
+    companion object {
+        fun create() = NaverSearchFragment()
+    }
 
 }

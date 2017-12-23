@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.nobrain.dagger_before.R
 import com.nobrain.dagger_before.databinding.ActivityHomeBinding
+import com.nobrain.dagger_before.search.SearchActivity
 
 
 class HomeActivity : AppCompatActivity(), HomeView {
@@ -18,7 +19,7 @@ class HomeActivity : AppCompatActivity(), HomeView {
     }
 
     override fun onNextClick() {
-        // TODO move search Activity
+        SearchActivity.startActivit(this)
     }
 }
 

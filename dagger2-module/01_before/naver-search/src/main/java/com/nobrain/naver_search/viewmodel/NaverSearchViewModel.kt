@@ -2,36 +2,26 @@ package com.nobrain.naver_search.viewmodel
 
 import android.databinding.ObservableArrayList
 import android.support.annotation.VisibleForTesting
+import com.nobrain.common_repository.SearchQueryRepository
 import com.nobrain.naver_search.repository.NaverSearchRepository
 import com.nobrain.naver_search.repository.domain.Book
 import com.trello.rxlifecycle2.LifecycleProvider
 import com.trello.rxlifecycle2.android.FragmentEvent
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.subjects.BehaviorSubject
 
 
-interface NaverSearchViewModel {
-    fun setQuery(text: String)
-}
-
-class NaverSearchViewModelImpl constructor(
-    lifecycleProvider: LifecycleProvider<FragmentEvent>,
-    @VisibleForTesting val searchRepository: NaverSearchRepository) : NaverSearchViewModel {
-    @VisibleForTesting val datas = ObservableArrayList<Book>()
-
-    @VisibleForTesting val loader = BehaviorSubject.create<String>()
+class NaverSearchViewModel constructor(lifecycleProvider: LifecycleProvider<FragmentEvent>,
+                                       @VisibleForTesting val searchRepository: NaverSearchRepository) {
+    @VisibleForTesting
+    val datas = ObservableArrayList<Book>()
 
     init {
-        loader.switchMapSingle { searchRepository.search(it) }
+        SearchQueryRepository.query().filter { it.isNotEmpty() }.switchMapSingle { searchRepository.search(it) }
             .compose(lifecycleProvider.bindToLifecycle())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 datas.clear()
                 datas.addAll(it.items)
             }, { println(it) })
-    }
-
-    override fun setQuery(text: String) {
-        loader.onNext(text)
     }
 }

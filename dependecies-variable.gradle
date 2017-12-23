@@ -2,6 +2,7 @@ ext {
 
     base_application_name = "com.nobrain.androidsamples"
 
+    ver_android_class_path = "3.0.1"
     ver_android_support = "27.0.2"
     ver_android_buildTool = "27.0.2"
     ver_android_compile = 27
@@ -13,9 +14,10 @@ ext {
     ver_stetho = "1.5.0"
     ver_kotlin = '1.2.10'
     ver_kotlin_coroutines = '0.14'
-    ver_stag = '2.0.2'
-    ver_autovalue = "1.3"
-    ver_autovalue_gson = "0.4.6"
+    ver_stag = '2.5.0'
+    ver_autovalue = "1.5"
+    ver_autovalue_gson = "0.7.0"
+    ver_gson = "2.8.1"
     ver_jackson = "2.8.7"
     ver_logan = "1.3.6"
     ver_rxlifecycle = "2.2.1"
@@ -27,8 +29,10 @@ ext {
     kotlin_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$ver_kotlin_coroutines"
     kotlin_junit = "org.jetbrains.kotlin:kotlin-test-junit:$ver_kotlin"
 
+    support_v4 = "com.android.support:support-v4:$ver_android_support"
     support_appcompat = "com.android.support:appcompat-v7:$ver_android_support"
     support_recyclerview = "com.android.support:recyclerview-v7:$ver_android_support"
+    support_cardview = "com.android.support:cardview-v7:$ver_android_support"
     support_constrainlayout = 'com.android.support.constraint:constraint-layout:1.0.1'
 
     retrofit = "com.squareup.retrofit2:retrofit:$ver_retrofit"
@@ -48,7 +52,7 @@ ext {
     butterknife = "com.jakewharton:butterknife:$ver_butterknife"
     butterknife_compiler = "com.jakewharton:butterknife-compiler:$ver_butterknife"
 
-    databinding_compiler = "com.android.databinding:compiler:2.3.3"
+    databinding_compiler = "com.android.databinding:compiler:$ver_android_class_path"
 
     rxjava2 = 'io.reactivex.rxjava2:rxjava:2.1.7'
     rxjava2_android = 'io.reactivex.rxjava2:rxandroid:2.0.1'
@@ -66,11 +70,13 @@ ext {
     stag_lib = "com.vimeo.stag:stag-library:$ver_stag"
     stag_compiler = "com.vimeo.stag:stag-library-compiler:$ver_stag"
 
-    autovalue_lib = "com.google.auto.value:auto-value:$ver_autovalue"
+
+    autovalue_lib = "com.jakewharton.auto.value:auto-value-annotations:$ver_autovalue"
     autovalue_compiler = "com.google.auto.value:auto-value:$ver_autovalue"
-    autovalue_gson_lib = "com.ryanharter.auto.value:auto-value-gson:$ver_autovalue_gson"
+    autovalue_gson_lib = "com.ryanharter.auto.value:auto-value-gson-annotations:$ver_autovalue_gson"
     autovalue_gson_compiler = "com.ryanharter.auto.value:auto-value-gson:$ver_autovalue_gson"
 
+    gson = "com.google.code.gson:gson:$ver_gson"
     jackson_core = "com.fasterxml.jackson.core:jackson-core:$ver_jackson"
     jackson_annotation = "com.fasterxml.jackson.core:jackson-annotations:$ver_jackson"
     jackson_databind = "com.fasterxml.jackson.core:jackson-databind:$ver_jackson"

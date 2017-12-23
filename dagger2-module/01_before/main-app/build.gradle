@@ -10,6 +10,7 @@ android {
         applicationId "com.nobrain.dagger_before"
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     dataBinding {
         enabled = true
@@ -19,8 +20,11 @@ android {
 dependencies {
 
     implementation project(':dagger2-module:01_before:naver-search')
+    implementation project(':dagger2-module:01_before:daum-search')
+    implementation project(':dagger2-module:common-repository')
 
     api kotlin_stdlib
+    api support_v4
     api support_appcompat
     api support_constrainlayout
 

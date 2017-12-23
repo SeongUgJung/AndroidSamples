@@ -7,19 +7,16 @@ kapt.arguments {
     arg("stagDebug", true)
 }
 
+android androidConfig
+
 android {
-    compileSdkVersion ver_android_compile
-    buildToolsVersion ver_android_buildTool
 
     defaultConfig {
         applicationId "com.nobrain.androidsamples.jsonparser"
-        minSdkVersion ver_android_min_sdk
-        targetSdkVersion ver_android_target_sdk
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        multiDexEnabled true
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -36,14 +33,13 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestApi('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
 
     api support_appcompat
-    api 'com.google.code.gson:gson:2.8.0'
+    api gson
 
-    api stag_lib
+    api (stag_lib) {
+        exclude group: 'com.intellij', module: 'annotations'
+    }
     kapt stag_compiler
 
     testApi junit
@@ -53,9 +49,9 @@ dependencies {
     api jackson_databind
     api jackson_annotation
 
-    api autovalue_lib
+    compileOnly autovalue_lib
     kapt autovalue_compiler
-    api autovalue_gson_lib
+    compileOnly autovalue_gson_lib
     kapt autovalue_gson_compiler
 
     api logan_lib
