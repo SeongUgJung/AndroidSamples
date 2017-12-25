@@ -21,7 +21,7 @@ dependencies {
 
     implementation project(':dagger2-module:01_before:naver-search')
     implementation project(':dagger2-module:01_before:daum-search')
-    api project(':dagger2-module:common-repository')
+    implementation project(':dagger2-module:common-repository')
 
     api kotlin_stdlib
     api support_v4
