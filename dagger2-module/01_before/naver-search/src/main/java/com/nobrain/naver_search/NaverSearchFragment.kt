@@ -1,9 +1,11 @@
 package com.nobrain.naver_search
 
 import android.os.Bundle
+import android.support.v7.widget.GridLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.nobrain.common_style.BookRecyclerAdapter
 import com.nobrain.naver_search.databinding.FragmentNaverBinding
 import com.nobrain.naver_search.repository.NaverSearchRepositoryImpl
 import com.nobrain.naver_search.repository.okHttpClient
@@ -24,6 +26,8 @@ class NaverSearchFragment : RxFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.viewModel = viewModel
+        binding.rvSearch.adapter = BookRecyclerAdapter()
+        binding.rvSearch.layoutManager = GridLayoutManager(activity, 3)
     }
 
     companion object {

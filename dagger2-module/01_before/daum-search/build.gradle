@@ -31,8 +31,8 @@ android {
 
 dependencies {
 
-    implementation project(':dagger2-module:common-style')
-    implementation project(':dagger2-module:common-repository')
+    api project(':dagger2-module:common-style')
+    api project(':dagger2-module:common-repository')
 
     api kotlin_stdlib
 

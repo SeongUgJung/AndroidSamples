@@ -1,0 +1,71 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android androidConfig
+
+android {
+
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "DAUM_API_KEY", "\"${rootProject.getProperties().get("daum.apikey")}\""
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+
+    api project(':dagger2-module:common-style')
+    api project(':dagger2-module:common-repository')
+    api project(':dagger2-module:02_after:fragment-info')
+
+    api kotlin_stdlib
+
+    api support_v4
+    api support_appcompat
+    api support_constrainlayout
+    api support_recyclerview
+
+    api dagger
+    api dagger_android
+    api dagger_android_support
+    kapt dagger_compiler
+    kapt dagger_android_compiler
+    compileOnly javax_annotation
+
+    api retrofit
+    api retrofit_convert_gson
+    api retrofit_adapter_rxjava2
+
+    api okhttp3
+    api okhttp3_logger
+
+    kapt databinding_compiler
+
+    api rxjava2
+    api rxjava2_android
+    api rxjava2_lifecycle_component
+    api rxjava2_lifecycle_kotlin
+
+    kapt databinding_compiler
+    testApi junit
+    testApi assertj
+    testApi mockito
+    testApi mockito_kotlin
+}

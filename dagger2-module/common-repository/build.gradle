@@ -22,4 +22,8 @@ android {
 dependencies {
     api kotlin_stdlib
     api rxjava2
+
+    api dagger
+    kapt dagger_compiler
+
 }

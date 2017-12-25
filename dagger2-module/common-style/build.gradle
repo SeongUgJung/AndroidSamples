@@ -32,6 +32,7 @@ dependencies {
     api kotlin_stdlib
     api support_recyclerview
     api support_cardview
+    api glide
 
     kapt databinding_compiler
 

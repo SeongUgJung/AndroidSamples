@@ -43,9 +43,9 @@ ext {
     okhttp3_logger = "com.squareup.okhttp3:logging-interceptor:$ver_okhttp3"
 
     dagger = "com.google.dagger:dagger:$ver_dagger2"
+    dagger_compiler = "com.google.dagger:dagger-compiler:$ver_dagger2"
     dagger_android = "com.google.dagger:dagger-android:$ver_dagger2@aar"
     dagger_android_support = "com.google.dagger:dagger-android-support:$ver_dagger2@aar"
-    dagger_compiler = "com.google.dagger:dagger-compiler:$ver_dagger2"
     dagger_android_compiler = "com.google.dagger:dagger-android-processor:$ver_dagger2"
     javax_annotation = 'javax.annotation:jsr250-api:1.0'
 
