@@ -4,6 +4,8 @@
 
 > It's just simple work. If you wanna read in more detail, I would recommend here [eyeahs/MvpDaggerSample](https://github.com/eyeahs/MvpDaggerSample).
 
+## [Dagger2 on Multi-Module](https://github.com/ZeroBrain/AndroidSamples/tree/master/dagger2-module)
+
 ## [Kotlin Coroutines](https://github.com/ZeroBrain/AndroidSamples/tree/master/KotlinCoroutines)
 
 > It's still writing. I haven't done yet.
